@@ -1,0 +1,14 @@
+C:\Users\alexg\OneDrive\Рабочий стол\ПСБ\PSBstudy\C#\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\bin\Release\net8.0\GaidukovPSBstudyCalculator.exe
+C:\Users\alexg\OneDrive\Рабочий стол\ПСБ\PSBstudy\C#\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\bin\Release\net8.0\GaidukovPSBstudyCalculator.deps.json
+C:\Users\alexg\OneDrive\Рабочий стол\ПСБ\PSBstudy\C#\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\bin\Release\net8.0\GaidukovPSBstudyCalculator.runtimeconfig.json
+C:\Users\alexg\OneDrive\Рабочий стол\ПСБ\PSBstudy\C#\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\bin\Release\net8.0\GaidukovPSBstudyCalculator.dll
+C:\Users\alexg\OneDrive\Рабочий стол\ПСБ\PSBstudy\C#\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\bin\Release\net8.0\GaidukovPSBstudyCalculator.pdb
+C:\Users\alexg\OneDrive\Рабочий стол\ПСБ\PSBstudy\C#\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\obj\Release\net8.0\GaidukovPSBstudyCalculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexg\OneDrive\Рабочий стол\ПСБ\PSBstudy\C#\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\obj\Release\net8.0\GaidukovPSBstudyCalculator.AssemblyInfoInputs.cache
+C:\Users\alexg\OneDrive\Рабочий стол\ПСБ\PSBstudy\C#\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\obj\Release\net8.0\GaidukovPSBstudyCalculator.AssemblyInfo.cs
+C:\Users\alexg\OneDrive\Рабочий стол\ПСБ\PSBstudy\C#\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\obj\Release\net8.0\GaidukovPSBstudyCalculator.csproj.CoreCompileInputs.cache
+C:\Users\alexg\OneDrive\Рабочий стол\ПСБ\PSBstudy\C#\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\obj\Release\net8.0\GaidukovPSBstudyCalculator.dll
+C:\Users\alexg\OneDrive\Рабочий стол\ПСБ\PSBstudy\C#\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\obj\Release\net8.0\refint\GaidukovPSBstudyCalculator.dll
+C:\Users\alexg\OneDrive\Рабочий стол\ПСБ\PSBstudy\C#\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\obj\Release\net8.0\GaidukovPSBstudyCalculator.pdb
+C:\Users\alexg\OneDrive\Рабочий стол\ПСБ\PSBstudy\C#\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\obj\Release\net8.0\GaidukovPSBstudyCalculator.genruntimeconfig.cache
+C:\Users\alexg\OneDrive\Рабочий стол\ПСБ\PSBstudy\C#\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\obj\Release\net8.0\ref\GaidukovPSBstudyCalculator.dll
