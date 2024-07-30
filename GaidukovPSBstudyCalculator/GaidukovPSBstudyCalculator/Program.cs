@@ -4,41 +4,10 @@ AddictionalFunctions add = new AddictionalFunctions();
 Calculating calc = new Calculating();
 InputData input = new InputData();
 
+//калькулятор с пошаговым рассчестом
 add.Greeting();
+input.GetDataV1();
+calc.Calculate(input.MathOperator, input.FirstNumber, input.SecondNumber);
 
-input.GetFirstNumber();
-input.GetMathOperator();
-input.GetSecondNumber();
-
-switch (input.MathOperator)
-{
-    case '+':
-        calc.CalculateAddiction(input.FirstNumber, input.SecondNumber);
-        add.WaitForFButtonPush();
-        break;
-
-    case '-':
-        calc.CalculateSubtraction(input.FirstNumber, input.SecondNumber);
-        add.WaitForFButtonPush();
-        break;
-
-    case '*':
-        calc.CalculateMultiplication(input.FirstNumber, input.SecondNumber);
-        add.WaitForFButtonPush();
-        break;
-
-    case '/':
-        calc.CalculateDivision(input.FirstNumber, input.SecondNumber);
-        add.WaitForFButtonPush();
-        break;
-
-    case '^':
-        calc.CalculatePower(input.FirstNumber, input.SecondNumber);
-        add.WaitForFButtonPush();
-        break;
-
-    default:
-        add.EnterIncorrectData();
-        add.WaitForFButtonPush();
-        break;
-}
+//Приоритеты выполнения операций:
+//Возведение в степень -> Умножение и деление -> Сложение и вычитание

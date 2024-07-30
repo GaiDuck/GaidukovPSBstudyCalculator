@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GaidukovPSBstudyCalculator
 {
-    internal class AddictionalFunctions
+    internal class AddictionalFunctions //Методы, не отвечающие за функционал программы
     {
         public void WaitForAnyButtonPush()
         {
@@ -21,13 +21,7 @@ namespace GaidukovPSBstudyCalculator
             Console.WriteLine(" ");
 
         }
-        public void WaitForFButtonPush()
-        {
-            Console.WriteLine(" ");
-            Console.WriteLine("Для завершения програаммы нажмите F...");
-            while (Console.ReadKey().Key != ConsoleKey.F) { }
-            Console.WriteLine(" ");
-        }
+
         public void EnterIncorrectData()
         {
             ConsoleColor defaltColor = Console.ForegroundColor;
@@ -39,9 +33,12 @@ namespace GaidukovPSBstudyCalculator
         {
             Console.WriteLine("Добро пожаловать в Калькулятор\n");
             Console.WriteLine("Мой калькулятор может выполнять следующие операции: " +
-                              "\n Сложение: + \n Вычитание: - \n Умножение: * \n Деление: / " +
-                              "\n Возведение в степень: ^");
-            WaitForAnyButtonPush();
+                              "\nСложение: + " +
+                              "\nВычитание: - " +
+                              "\nУмножение: * " +
+                              "\nДеление: / " +
+                              "\nВозведение в степень: ^");
+            WaitForEnterButtonPush();
         }
     }
 }

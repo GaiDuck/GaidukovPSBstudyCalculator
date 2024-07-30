@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GaidukovPSBstudyCalculator
 {
-    internal class InputData
+    internal class InputData 
     {
         AddictionalFunctions add = new AddictionalFunctions();
 
@@ -14,12 +14,20 @@ namespace GaidukovPSBstudyCalculator
         public double SecondNumber { get; private set; }
         public char MathOperator { get; private set; }
 
-        bool parsed;
-        bool mathOperatorFound;
         char[] mathOperators = { '+', '-', '*', '/', '^' };
+
+        static string input = "22 + 22";
+        string[] output = input.Split(' ');
+
+        List<double> numbers = new List<double>();
+        List<char> operators = new List<char>();
+
+        //калькулятор с вводом по действиям
 
         double GetNumber()
         {
+            bool parsed;
+
             do
             {
                 parsed = double.TryParse(Console.ReadLine(), out var input);
@@ -29,32 +37,33 @@ namespace GaidukovPSBstudyCalculator
                 else
                     add.EnterIncorrectData();
             }
-            while (!parsed);
+            while (!parsed); //будет запрашивать ввод числа пока пользователь не введет корректное значение
 
             return 0;
         }
 
-        public void GetFirstNumber()
+        void GetFirstNumber()
         {
             Console.Write("Введите первое число: ");
             FirstNumber = GetNumber();
         }
 
-        public void GetSecondNumber()
+        void GetSecondNumber()
         {
             Console.Write("Введите второе число: ");
             do
             {
                 SecondNumber = GetNumber();
             }
-            while (!DataTesting(MathOperator, SecondNumber));
+            while (!Validation(MathOperator, SecondNumber));
         }
 
-        public void GetMathOperator()
+        void GetMathOperator()
         {
             Console.Write("Введите символ операции: ");
 
-            mathOperatorFound = false;
+            bool mathOperatorFound = false;
+            bool parsed;
 
             do
             {
@@ -77,7 +86,52 @@ namespace GaidukovPSBstudyCalculator
             while (!mathOperatorFound);
         }
 
-        bool DataTesting(char mathOperator, double number)
+        public void GetDataV1()
+        {
+            GetFirstNumber();
+            GetMathOperator();
+            GetSecondNumber();
+        }
+
+        //калькулятор с вводом строкой
+
+        void StringInput()
+        {
+            Console.Write("Введите математическое выражение одной строкой, разделяя все числа и математические операции " +
+                          "пробелами. Используйте запятую для записи чисел с дробной частью.");
+            input = Console.ReadLine();
+
+            if (input == null)
+                Console.WriteLine("0");
+        }
+
+        void CompliteLists()
+        {
+            char tempMathOper;
+
+            foreach (string simbol in output)
+            {
+                bool parced = double.TryParse(simbol, out var result);
+                if (parced)
+                    numbers.Add(result);
+                else
+                {
+                    tempMathOper = Convert.ToChar(simbol);
+                    operators.Add(tempMathOper);
+                }
+            }
+        }
+
+        void SetNumbersByMathoperator(int MathOperatorNumber)
+        {
+            FirstNumber = numbers[MathOperatorNumber];
+            SecondNumber = numbers[MathOperatorNumber + 1];
+            MathOperator = operators[MathOperatorNumber];
+        }
+
+        //общие методы
+
+        bool Validation(char mathOperator, double number)
         {
             if (mathOperator == '/' && number == 0)
             {
@@ -86,7 +140,6 @@ namespace GaidukovPSBstudyCalculator
             }
             else
                 return true;
-            
         }
     }
 }

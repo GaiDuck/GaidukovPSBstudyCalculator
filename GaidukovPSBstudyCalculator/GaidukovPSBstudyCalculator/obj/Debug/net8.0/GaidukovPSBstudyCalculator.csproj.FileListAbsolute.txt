@@ -30,3 +30,4 @@ C:\Users\alexg\OneDrive\Рабочий стол\GitHub\GaidukovPSBstudyCalculato
 C:\Users\alexg\OneDrive\Рабочий стол\GitHub\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\obj\Debug\net8.0\GaidukovPSBstudyCalculator.pdb
 C:\Users\alexg\OneDrive\Рабочий стол\GitHub\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\obj\Debug\net8.0\GaidukovPSBstudyCalculator.genruntimeconfig.cache
 C:\Users\alexg\OneDrive\Рабочий стол\GitHub\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\obj\Debug\net8.0\ref\GaidukovPSBstudyCalculator.dll
+C:\Users\alexg\OneDrive\Рабочий стол\GitHub\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\GaidukovPSBstudyCalculator\obj\Debug\net8.0\GaidukovPSBstudyCalculator.sourcelink.json

@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BD60AB6B-CF3B-4295-A6CD-5A0A70D4220A}|GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator.csproj|c:\\users\\alexg\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\github\\gaidukovpsbstudycalculator\\gaidukovpsbstudycalculator\\gaidukovpsbstudycalculator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD60AB6B-CF3B-4295-A6CD-5A0A70D4220A}|GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator.csproj|solutionrelative:gaidukovpsbstudycalculator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BD60AB6B-CF3B-4295-A6CD-5A0A70D4220A}|GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator.csproj|c:\\users\\alexg\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\github\\gaidukovpsbstudycalculator\\gaidukovpsbstudycalculator\\gaidukovpsbstudycalculator\\addictionalfunctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD60AB6B-CF3B-4295-A6CD-5A0A70D4220A}|GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator.csproj|solutionrelative:gaidukovpsbstudycalculator\\addictionalfunctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BD60AB6B-CF3B-4295-A6CD-5A0A70D4220A}|GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator.csproj|c:\\users\\alexg\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\github\\gaidukovpsbstudycalculator\\gaidukovpsbstudycalculator\\gaidukovpsbstudycalculator\\inputdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD60AB6B-CF3B-4295-A6CD-5A0A70D4220A}|GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator.csproj|solutionrelative:gaidukovpsbstudycalculator\\inputdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD60AB6B-CF3B-4295-A6CD-5A0A70D4220A}|GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator.csproj|c:\\users\\alexg\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\github\\gaidukovpsbstudycalculator\\gaidukovpsbstudycalculator\\gaidukovpsbstudycalculator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD60AB6B-CF3B-4295-A6CD-5A0A70D4220A}|GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator.csproj|solutionrelative:gaidukovpsbstudycalculator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BD60AB6B-CF3B-4295-A6CD-5A0A70D4220A}|GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator.csproj|c:\\users\\alexg\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\github\\gaidukovpsbstudycalculator\\gaidukovpsbstudycalculator\\gaidukovpsbstudycalculator\\calculating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 278,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,52 +38,52 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddictionalFunctions.cs",
+              "DocumentMoniker": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\AddictionalFunctions.cs",
+              "RelativeDocumentMoniker": "GaidukovPSBstudyCalculator\\AddictionalFunctions.cs",
+              "ToolTip": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\AddictionalFunctions.cs",
+              "RelativeToolTip": "GaidukovPSBstudyCalculator\\AddictionalFunctions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T11:10:35.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\Program.cs",
+              "RelativeDocumentMoniker": "GaidukovPSBstudyCalculator\\Program.cs",
+              "ToolTip": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\Program.cs",
+              "RelativeToolTip": "GaidukovPSBstudyCalculator\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T13:57:35.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InputData.cs",
+              "DocumentMoniker": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\InputData.cs",
+              "RelativeDocumentMoniker": "GaidukovPSBstudyCalculator\\InputData.cs",
+              "ToolTip": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\InputData.cs",
+              "RelativeToolTip": "GaidukovPSBstudyCalculator\\InputData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T11:09:16.187Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Calculating.cs",
               "DocumentMoniker": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\Calculating.cs",
               "RelativeDocumentMoniker": "GaidukovPSBstudyCalculator\\Calculating.cs",
               "ToolTip": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\Calculating.cs",
               "RelativeToolTip": "GaidukovPSBstudyCalculator\\Calculating.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAYwDMAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-24T13:30:10.204Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "InputData.cs",
-              "DocumentMoniker": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\InputData.cs",
-              "RelativeDocumentMoniker": "GaidukovPSBstudyCalculator\\InputData.cs",
-              "ToolTip": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\InputData.cs",
-              "RelativeToolTip": "GaidukovPSBstudyCalculator\\InputData.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAywDsAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T11:09:16.187Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AddictionalFunctions.cs",
-              "DocumentMoniker": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\AddictionalFunctions.cs",
-              "RelativeDocumentMoniker": "GaidukovPSBstudyCalculator\\AddictionalFunctions.cs",
-              "ToolTip": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\AddictionalFunctions.cs",
-              "RelativeToolTip": "GaidukovPSBstudyCalculator\\AddictionalFunctions.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAYwCUAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T11:10:35.629Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\Program.cs",
-              "RelativeDocumentMoniker": "GaidukovPSBstudyCalculator\\Program.cs",
-              "ToolTip": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\Program.cs",
-              "RelativeToolTip": "GaidukovPSBstudyCalculator\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-23T13:57:35.676Z"
             }
           ]
         },
