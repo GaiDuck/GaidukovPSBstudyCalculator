@@ -10,44 +10,46 @@ namespace GaidukovPSBstudyCalculator
     {
         AddictionalFunctions add = new AddictionalFunctions();
 
+        public double TempResult { get; private set; }
+
         public double CalculateAddiction(double FirstNumber, double SecondNumber)
         {
             Console.WriteLine($"Считаем: {FirstNumber} + {SecondNumber}");
-            double result = FirstNumber + SecondNumber;
-            Console.WriteLine($"результат: {result}");
-            return result;
+            TempResult = FirstNumber + SecondNumber;
+            Console.WriteLine($"результат: {TempResult}");
+            return TempResult;
         }
 
         public double CalculateSubtraction(double FirstNumber, double SecondNumber)
         {
             Console.WriteLine($"Считаем: {FirstNumber} - {SecondNumber}");
-            double result = FirstNumber - SecondNumber;
-            Console.WriteLine($"результат: {result}");
-            return result;
+            TempResult = FirstNumber - SecondNumber;
+            Console.WriteLine($"результат: {TempResult}");
+            return TempResult;
         }
 
         public double CalculateMultiplication(double FirstNumber, double SecondNumber)
         {
             Console.WriteLine($"Считаем: {FirstNumber} * {SecondNumber}");
-            double result = FirstNumber * SecondNumber;
-            Console.WriteLine($"результат: {result}");
-            return result;
+            TempResult = FirstNumber * SecondNumber;
+            Console.WriteLine($"результат: {TempResult}");
+            return TempResult;
         }
 
         public double CalculateDivision(double FirstNumber, double SecondNumber)
         {
             Console.WriteLine($"Считаем: {FirstNumber} / {SecondNumber}");
-            double result = FirstNumber / SecondNumber;
-            Console.WriteLine($"результат: {result}");
-            return result;
+            TempResult = FirstNumber / SecondNumber;
+            Console.WriteLine($"результат: {TempResult}");
+            return TempResult;
         }
 
         public double CalculatePower(double FirstNumber, double SecondNumber)
         {
             Console.WriteLine($"Считаем: {FirstNumber} ^ {SecondNumber}");
-            double result = Math.Pow(FirstNumber, SecondNumber);
-            Console.WriteLine($"результат: {result}");
-            return result;
+            TempResult = Math.Pow(FirstNumber, SecondNumber);
+            Console.WriteLine($"результат: {TempResult}");
+            return TempResult;
         }
 
         public void Calculate(char MathOperator, double FirstNumber, double SecondNumber)
@@ -78,7 +80,6 @@ namespace GaidukovPSBstudyCalculator
                     add.EnterIncorrectData();
                     break;
             }
-
             add.WaitForEnterButtonPush();
         }
     }

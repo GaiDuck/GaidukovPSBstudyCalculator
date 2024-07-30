@@ -6,21 +6,29 @@ using System.Threading.Tasks;
 
 namespace GaidukovPSBstudyCalculator
 {
-    internal class InputData 
+    internal class InputData
     {
         AddictionalFunctions add = new AddictionalFunctions();
+
 
         public double FirstNumber { get; private set; }
         public double SecondNumber { get; private set; }
         public char MathOperator { get; private set; }
 
-        char[] mathOperators = { '+', '-', '*', '/', '^' };
+        private static char[] mathOperators = { '+', '-', '*', '/', '^' }; //при попытке сделать const выбрасывает две ошибки
 
-        static string input = "22 + 22";
-        string[] output = input.Split(' ');
+        List<string> _splitedInput;
+        List<double> _numbers;
+        List<char> _operators;
 
-        List<double> numbers = new List<double>();
-        List<char> operators = new List<char>();
+        public InputData()
+        {
+            _splitedInput = new List<string>();
+            _numbers = new List<double>();
+            _operators = new List<char>();
+        }
+
+        public int MathOperatorCount { get; private set; }  
 
         //калькулятор с вводом по действиям
 
@@ -95,38 +103,56 @@ namespace GaidukovPSBstudyCalculator
 
         //калькулятор с вводом строкой
 
-        void StringInput()
+        public void StringInput()
         {
             Console.Write("Введите математическое выражение одной строкой, разделяя все числа и математические операции " +
                           "пробелами. Используйте запятую для записи чисел с дробной частью.");
-            input = Console.ReadLine();
+            
+            string[] input = Console.ReadLine().Split(' ');
 
             if (input == null)
-                Console.WriteLine("0");
-        }
-
-        void CompliteLists()
-        {
-            char tempMathOper;
-
-            foreach (string simbol in output)
+                _splitedInput.Add("0");
+            else
             {
-                bool parced = double.TryParse(simbol, out var result);
-                if (parced)
-                    numbers.Add(result);
-                else
-                {
-                    tempMathOper = Convert.ToChar(simbol);
-                    operators.Add(tempMathOper);
-                }
+                foreach (string s in input) 
+                { 
+                    _splitedInput.Add(s);
+                } 
             }
         }
 
-        void SetNumbersByMathoperator(int MathOperatorNumber)
+        void CompliteLists(List<string> SplitedInput)
         {
-            FirstNumber = numbers[MathOperatorNumber];
-            SecondNumber = numbers[MathOperatorNumber + 1];
-            MathOperator = operators[MathOperatorNumber];
+            foreach (string simbol in SplitedInput)
+            {
+                bool parced = double.TryParse(simbol, out var result);
+
+                if (parced)
+                    _numbers.Add(result);
+                else
+                    _operators.Add(Convert.ToChar(simbol));
+            }
+            MathOperatorCount = _operators.Count;
+        }
+
+        public void SetNumbersByMathoperator(int mathOperatorNumber)
+        {
+            FirstNumber = _numbers[mathOperatorNumber];
+            SecondNumber = _numbers[mathOperatorNumber + 1];
+            MathOperator = _operators[mathOperatorNumber];
+        }
+
+        public void UpdateExpression(double tempResult, int mathOperatorNumber)
+        {
+            _numbers[mathOperatorNumber] = tempResult;
+            _numbers.RemoveAt(mathOperatorNumber+1);
+            _operators.RemoveAt(mathOperatorNumber);
+        }
+
+        public void GetDataV2()
+        {
+            StringInput();
+            CompliteLists(_splitedInput);
         }
 
         //общие методы
@@ -135,7 +161,7 @@ namespace GaidukovPSBstudyCalculator
         {
             if (mathOperator == '/' && number == 0)
             {
-                add.EnterIncorrectData();
+                //add.EnterIncorrectData();
                 return false;
             }
             else
