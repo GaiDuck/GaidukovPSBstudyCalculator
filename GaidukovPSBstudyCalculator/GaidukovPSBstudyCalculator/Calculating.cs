@@ -12,44 +12,39 @@ namespace GaidukovPSBstudyCalculator
 
         public double TempResult { get; private set; }
 
-        public double CalculateAddiction(double FirstNumber, double SecondNumber)
+        double CalculateAddiction(double FirstNumber, double SecondNumber)
         {
-            Console.WriteLine($"Считаем: {FirstNumber} + {SecondNumber}");
             TempResult = FirstNumber + SecondNumber;
-            Console.WriteLine($"результат: {TempResult}");
             return TempResult;
         }
 
-        public double CalculateSubtraction(double FirstNumber, double SecondNumber)
+        double CalculateSubtraction(double FirstNumber, double SecondNumber)
         {
-            Console.WriteLine($"Считаем: {FirstNumber} - {SecondNumber}");
             TempResult = FirstNumber - SecondNumber;
-            Console.WriteLine($"результат: {TempResult}");
             return TempResult;
         }
 
-        public double CalculateMultiplication(double FirstNumber, double SecondNumber)
+        double CalculateMultiplication(double FirstNumber, double SecondNumber)
         {
-            Console.WriteLine($"Считаем: {FirstNumber} * {SecondNumber}");
             TempResult = FirstNumber * SecondNumber;
-            Console.WriteLine($"результат: {TempResult}");
             return TempResult;
         }
 
-        public double CalculateDivision(double FirstNumber, double SecondNumber)
+        double CalculateDivision(double FirstNumber, double SecondNumber)
         {
-            Console.WriteLine($"Считаем: {FirstNumber} / {SecondNumber}");
             TempResult = FirstNumber / SecondNumber;
-            Console.WriteLine($"результат: {TempResult}");
             return TempResult;
         }
 
-        public double CalculatePower(double FirstNumber, double SecondNumber)
+        double CalculatePower(double FirstNumber, double SecondNumber)
         {
-            Console.WriteLine($"Считаем: {FirstNumber} ^ {SecondNumber}");
             TempResult = Math.Pow(FirstNumber, SecondNumber);
-            Console.WriteLine($"результат: {TempResult}");
             return TempResult;
+        }
+
+        void PublicLogs(double FirstNumber, double SecondNumber, char MathOperator, double TempResult)
+        {
+            Console.WriteLine($"{FirstNumber} {MathOperator} {SecondNumber} = {TempResult}");
         }
 
         public void Calculate(char MathOperator, double FirstNumber, double SecondNumber)
@@ -57,30 +52,35 @@ namespace GaidukovPSBstudyCalculator
             switch (MathOperator)
             {
                 case '+':
-                    CalculateAddiction(FirstNumber, SecondNumber);
+                    PublicLogs(FirstNumber, SecondNumber, MathOperator, 
+                        CalculateAddiction(FirstNumber, SecondNumber));
                     break;
 
                 case '-':
-                    CalculateSubtraction(FirstNumber, SecondNumber);
+                    PublicLogs(FirstNumber, SecondNumber, MathOperator, 
+                        CalculateSubtraction(FirstNumber, SecondNumber));
                     break;
 
                 case '*':
-                    CalculateMultiplication(FirstNumber, SecondNumber);
+                    PublicLogs(FirstNumber, SecondNumber, MathOperator, 
+                        CalculateMultiplication(FirstNumber, SecondNumber));
                     break;
 
                 case '/':
-                    CalculateDivision(FirstNumber, SecondNumber);
+                    PublicLogs(FirstNumber, SecondNumber, MathOperator, 
+                        CalculateDivision(FirstNumber, SecondNumber));
                     break;
 
                 case '^':
-                    CalculatePower(FirstNumber, SecondNumber);
+                    PublicLogs(FirstNumber, SecondNumber, MathOperator, 
+                        CalculatePower(FirstNumber, SecondNumber));
                     break;
 
                 default:
                     add.EnterIncorrectData();
                     break;
             }
-            add.WaitForEnterButtonPush();
+            //add.WaitForEnterButtonPush();
         }
     }
 }

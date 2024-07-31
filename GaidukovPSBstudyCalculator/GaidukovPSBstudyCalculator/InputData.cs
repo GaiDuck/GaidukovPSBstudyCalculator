@@ -10,12 +10,11 @@ namespace GaidukovPSBstudyCalculator
     {
         AddictionalFunctions add = new AddictionalFunctions();
 
-
         public double FirstNumber { get; private set; }
         public double SecondNumber { get; private set; }
         public char MathOperator { get; private set; }
 
-        private static char[] mathOperators = { '+', '-', '*', '/', '^' }; //при попытке сделать const выбрасывает две ошибки
+        private static char[] mathOperators = { '+', '-', '*', '/', '^', '(', ')' }; //при попытке сделать const выбрасывает две ошибки
 
         List<string> _splitedInput;
         List<double> _numbers;
@@ -63,7 +62,7 @@ namespace GaidukovPSBstudyCalculator
             {
                 SecondNumber = GetNumber();
             }
-            while (!Validation(MathOperator, SecondNumber));
+            while (!Validation(MathOperator, FirstNumber, SecondNumber));
         }
 
         void GetMathOperator()
@@ -71,11 +70,10 @@ namespace GaidukovPSBstudyCalculator
             Console.Write("Введите символ операции: ");
 
             bool mathOperatorFound = false;
-            bool parsed;
 
             do
             {
-                parsed = char.TryParse(Console.ReadLine(), out var input);
+                bool parsed = char.TryParse(Console.ReadLine(), out var input);
 
                 if (parsed)
                 {
@@ -106,7 +104,7 @@ namespace GaidukovPSBstudyCalculator
         public void StringInput()
         {
             Console.Write("Введите математическое выражение одной строкой, разделяя все числа и математические операции " +
-                          "пробелами. Используйте запятую для записи чисел с дробной частью.");
+                          "пробелами. Используйте запятую для записи чисел с дробной частью.\n\n");
             
             string[] input = Console.ReadLine().Split(' ');
 
@@ -157,11 +155,16 @@ namespace GaidukovPSBstudyCalculator
 
         //общие методы
 
-        bool Validation(char mathOperator, double number)
+        bool Validation(char mathOperator, double firstNumber, double secondNumber)
         {
-            if (mathOperator == '/' && number == 0)
+            if (mathOperator == '/' && secondNumber == 0)
             {
-                //add.EnterIncorrectData();
+                add.EnterIncorrectData();
+                return false;
+            }
+            else if (mathOperator == '^' && firstNumber < 0 && secondNumber > -1 && secondNumber < 1)
+            {
+                add.EnterIncorrectData();
                 return false;
             }
             else
