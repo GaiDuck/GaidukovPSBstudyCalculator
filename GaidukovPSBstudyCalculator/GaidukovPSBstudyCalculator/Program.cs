@@ -41,7 +41,7 @@ void CalculatingByString()      //Приоритеты выполнения оп
     Console.WriteLine("\nДанные получены!\n");
 
     int i = input.MathOperatorCount - 1;
-    Console.WriteLine($"Найдено {i + 1} математических операций.");
+    Console.WriteLine($"Найдено {i + 1} математических операций."); //у меня такое ощущение, что дальше программа просто в циклы не заходит.
 
     for (int a = i; a > -1; a--) //цикл для вычисления степеней
     {
