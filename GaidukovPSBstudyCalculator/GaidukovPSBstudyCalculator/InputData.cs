@@ -8,8 +8,6 @@ namespace GaidukovPSBstudyCalculator
 {
     internal class InputData
     {
-        AddictionalFunctions add = new AddictionalFunctions();
-
         public double FirstNumber { get; private set; }
         public double SecondNumber { get; private set; }
         public char MathOperator { get; private set; }
@@ -42,7 +40,7 @@ namespace GaidukovPSBstudyCalculator
                 if (parsed)
                     return input;
                 else
-                    add.EnterIncorrectData();
+                    AddictionalFunctions.EnterIncorrectData();
             }
             while (!parsed); //будет запрашивать ввод числа пока пользователь не введет корректное значение
 
@@ -77,17 +75,15 @@ namespace GaidukovPSBstudyCalculator
 
                 if (parsed)
                 {
-                    foreach (char m in mathOperators)
-                        if (m == input)
-                        {
-                            MathOperator = input;
-                            mathOperatorFound = true;
-                            break;
-                        }
+                    if(mathOperators.Contains(input))
+                    {
+                        MathOperator = input;
+                        mathOperatorFound = true;
+                    }
                 }
 
-                if (!mathOperatorFound || !parsed)
-                    add.EnterIncorrectData();
+                if (!(mathOperatorFound && parsed))
+                    AddictionalFunctions.EnterIncorrectData();
             }
             while (!mathOperatorFound);
         }
@@ -159,12 +155,12 @@ namespace GaidukovPSBstudyCalculator
         {
             if (mathOperator == '/' && secondNumber == 0)
             {
-                add.EnterIncorrectData();
+                AddictionalFunctions.EnterIncorrectData();
                 return false;
             }
             else if (mathOperator == '^' && firstNumber < 0 && secondNumber > -1 && secondNumber < 1)
             {
-                add.EnterIncorrectData();
+                AddictionalFunctions.EnterIncorrectData();
                 return false;
             }
             else

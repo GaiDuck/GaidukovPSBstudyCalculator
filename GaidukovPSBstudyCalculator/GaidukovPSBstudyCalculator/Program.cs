@@ -1,10 +1,9 @@
 ﻿using GaidukovPSBstudyCalculator;
 
-AddictionalFunctions add = new AddictionalFunctions();
 Calculating calc = new Calculating();
 InputData input = new InputData();
 
-add.Greeting();
+AddictionalFunctions.Greeting();
 Console.WriteLine("1 - пошаговый, 2 - строкой");
 
 switch (Convert.ToByte(Console.ReadLine()))
@@ -29,8 +28,7 @@ void CalculatingStepByStep()  //калькулятор с пошаговым р�
 }
 
 void CalculatingFromString(int i)
-{
-    input.SetNumbersByMathoperator(i); 
+{ 
     calc.Calculate(input.MathOperator, input.FirstNumber, input.SecondNumber);
     input.UpdateExpression(calc.TempResult, i); 
 }
@@ -38,13 +36,13 @@ void CalculatingFromString(int i)
 void CalculatingByString()      //Приоритеты выполнения операций:
 {                               //Возведение в степень -> Умножение и деление -> Сложение и вычитание
     input.GetDataV2();
-    Console.WriteLine("\nДанные получены!\n");
 
     int i = input.MathOperatorCount - 1;
-    Console.WriteLine($"Найдено {i + 1} математических операций."); //у меня такое ощущение, что дальше программа просто в циклы не заходит.
+    Console.WriteLine($"Найдено {i + 1} математических операций.");
 
     for (int a = i; a > -1; a--) //цикл для вычисления степеней
     {
+        input.SetNumbersByMathoperator(a);
         if (input.MathOperator == '^')
         {
             CalculatingFromString(a);
@@ -54,6 +52,7 @@ void CalculatingByString()      //Приоритеты выполнения оп
 
     for (int b = i; b > -1; b--) //цикл для вычисления умножений и делений
     {
+        input.SetNumbersByMathoperator(b);
         if (input.MathOperator == '*' || input.MathOperator == '/')
         {
             CalculatingFromString(b);
@@ -63,6 +62,7 @@ void CalculatingByString()      //Приоритеты выполнения оп
 
     for (int c = i; c > -1; c--) //цикл для вычисления сложений и вычитаний
     {
+        input.SetNumbersByMathoperator(c);
         if (input.MathOperator == '+' || input.MathOperator == '-')
         {
             CalculatingFromString(c);
