@@ -60,13 +60,21 @@ void CalculatingByString()      //Приоритеты выполнения оп
         }
     }
 
-    for (int c = i; c > -1; c--) //цикл для вычисления сложений и вычитаний
+    for (int c = 0; c < i + 2; c++) //цикл для вычисления сложений и вычитаний
     {
-        input.SetNumbersByMathoperator(c);
-        if (input.MathOperator == '+' || input.MathOperator == '-')
+        try
         {
-            CalculatingFromString(c);
-            i--;
+            input.SetNumbersByMathoperator(c);
+
+            if (input.MathOperator == '+' || input.MathOperator == '-')
+            {
+                CalculatingFromString(c);
+                c--;
+            }
+        }
+        catch
+        {
+            break;
         }
     }
 }
