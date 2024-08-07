@@ -40,9 +40,45 @@ namespace GaidukovPSBstudyCalculator
             return TempResult;
         }
 
-        void PublicLogs(double firstNumber, double secondNumber, char mathOperator, double tempResult)
+        void PublicLogs(double firstNumber, double secondNumber, char mathOperator, double tempResult, string status)
         {
-            Console.WriteLine($"{firstNumber} {mathOperator} {secondNumber} = {tempResult}");
+            if (status == "OK")
+                Console.WriteLine($"{firstNumber} {mathOperator} {secondNumber} = {tempResult}");
+            else
+            {
+                switch (status)
+                {
+                    case "деление на ноль":
+                        ConsoleColor defaltColor1 = Console.ForegroundColor;
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Обнаружено деление на ноль, операция не может быть выполнена.");
+                        Console.ForegroundColor = defaltColor1;
+                        break;
+
+                    case "корень из отрицательного числа":
+                        ConsoleColor defaltColor2 = Console.ForegroundColor;
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Обнаружено взятие корняя из отрицательного числа, операция не может быть выполнена.");
+                        Console.ForegroundColor = defaltColor2;
+                        break;
+                };
+            }
+        }
+
+        string OperationIsValid(double firstNumber, double secondNumber, char mathOperator)
+        {
+            if (mathOperator == '/' && secondNumber == 0)
+            {
+                AdditionalFunctions.EnterIncorrectData();
+                return "деление на ноль";
+            }
+            else if (mathOperator == '^' && firstNumber < 0 && secondNumber > -1 && secondNumber < 1)
+            {
+                AdditionalFunctions.EnterIncorrectData();
+                return "корень из отрицательного числа";
+            }
+            else
+                return "ОК";
         }
 
         public void Calculate(char mathOperator, double firstNumber, double secondNumber)
@@ -51,27 +87,32 @@ namespace GaidukovPSBstudyCalculator
             {
                 case '+':
                     PublicLogs(firstNumber, secondNumber, mathOperator, 
-                        CalculateAddiction(firstNumber, secondNumber));
+                        CalculateAddiction(firstNumber, secondNumber),
+                        OperationIsValid(firstNumber, secondNumber, mathOperator));
                     break;
 
                 case '-':
                     PublicLogs(firstNumber, secondNumber, mathOperator, 
-                        CalculateSubtraction(firstNumber, secondNumber));
+                        CalculateSubtraction(firstNumber, secondNumber),
+                        OperationIsValid(firstNumber, secondNumber, mathOperator));
                     break;
 
                 case '*':
                     PublicLogs(firstNumber, secondNumber, mathOperator, 
-                        CalculateMultiplication(firstNumber, secondNumber));
+                        CalculateMultiplication(firstNumber, secondNumber),
+                        OperationIsValid(firstNumber, secondNumber, mathOperator));
                     break;
 
                 case '/':
                     PublicLogs(firstNumber, secondNumber, mathOperator, 
-                        CalculateDivision(firstNumber, secondNumber));
+                        CalculateDivision(firstNumber, secondNumber), 
+                        OperationIsValid(firstNumber, secondNumber, mathOperator));
                     break;
 
                 case '^':
                     PublicLogs(firstNumber, secondNumber, mathOperator, 
-                        CalculatePower(firstNumber, secondNumber));
+                        CalculatePower(firstNumber, secondNumber),
+                        OperationIsValid(firstNumber, secondNumber, mathOperator));
                     break;
 
                 default:

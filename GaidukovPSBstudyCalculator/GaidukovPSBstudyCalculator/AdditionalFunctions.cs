@@ -13,6 +13,7 @@ namespace GaidukovPSBstudyCalculator
             Console.WriteLine("\nДля продолжения нажмите любую клавишу... \n ");
             Console.ReadKey();
         }
+
         public static void WaitForEnterButtonPush()
         {
             Console.WriteLine(" ");
@@ -26,9 +27,10 @@ namespace GaidukovPSBstudyCalculator
         {
             ConsoleColor defaltColor = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.Write("Вы ввели не корректные данные. \nПопробуйте ввести данные повторно:");
+            Console.Write("Вы ввели не корректные данные.");
             Console.ForegroundColor = defaltColor;
         }
+
         public static void Greeting()
         {
             Console.WriteLine("Добро пожаловать в Калькулятор\n");
