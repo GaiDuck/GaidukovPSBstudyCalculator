@@ -3,26 +3,50 @@
 Calculating calc = new Calculating();
 InputData input = new InputData();
 
-AddictionalFunctions.Greeting();
-Console.WriteLine("1 - пошаговый, 2 - строкой");
+AdditionalFunctions.Greeting();
 
-switch (Convert.ToByte(Console.ReadLine()))
+bool modeIsCorrect;
+
+do
 {
-    case 1:
-        CalculatingStepByStep();
-    break;
+    Console.WriteLine("1 - пошаговый, 2 - строкой");
 
-    case 2:  //калькулятор, считающий из строки
-        CalculatingByString();
-    break;
+    modeIsCorrect = false;
 
-    default:
-        Console.WriteLine("Эта функция находится в разработке.");
-    break;
+    bool parsed = byte.TryParse(Console.ReadLine(), out var mode);
+
+    if (parsed)
+    {
+        switch (mode)
+        {
+            case 1:
+                CalculatingStepByStep();
+                modeIsCorrect = true;
+                break;
+
+            case 2:  //калькулятор, считающий из строки
+                input.StringInput();
+                do
+                {
+                    input.GetBrackets();
+                    CalculatingByString();
+                    input.SplitedInputRemoveBracket(calc.TempResult);
+                } while (input.BracketIsFound); // не хватает перезаписи значения скобок
+
+                modeIsCorrect = true;
+                break;
+
+            default:
+                Console.WriteLine("Эта функция находится в разработке, попробуйте воспользоваться другой функцией.");
+                break;
+        }  
+    }
 }
+while (!modeIsCorrect);
 
 void CalculatingStepByStep()  //калькулятор с пошаговым рассчестом
 {
+    input.StringInput();
     input.GetDataV1();
     calc.Calculate(input.MathOperator, input.FirstNumber, input.SecondNumber);
 }
@@ -35,8 +59,6 @@ void CalculatingFromString(int i)
 
 void CalculatingByString()      //Приоритеты выполнения операций:
 {                               //Возведение в степень -> Умножение и деление -> Сложение и вычитание
-    input.GetDataV2();
-
     int i = input.MathOperatorCount - 1;
     Console.WriteLine($"Найдено {i + 1} математических операций.");
 

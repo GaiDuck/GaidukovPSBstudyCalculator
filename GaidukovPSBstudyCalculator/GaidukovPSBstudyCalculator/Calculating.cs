@@ -75,7 +75,7 @@ namespace GaidukovPSBstudyCalculator
                     break;
 
                 default:
-                    AddictionalFunctions.EnterIncorrectData();
+                    AdditionalFunctions.EnterIncorrectData();
                     break;
             }
             //add.WaitForEnterButtonPush();

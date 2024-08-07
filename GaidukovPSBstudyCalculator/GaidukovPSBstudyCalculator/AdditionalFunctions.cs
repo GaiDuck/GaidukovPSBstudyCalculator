@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GaidukovPSBstudyCalculator
 {
-    internal static class AddictionalFunctions //Методы, не отвечающие за функционал программы
+    internal static class AdditionalFunctions //Методы, не отвечающие за функционал программы
     {
         public static void WaitForAnyButtonPush()
         {
