@@ -36,6 +36,9 @@ do
                     input.SetBracketIndexes();
                 } while (input.BracketIsFound); // не хватает перезаписи значения скобок
 
+                input.SetExpressionAfterOpenBrackets();
+                CalculatingByString();
+
                 modeIsCorrect = true;
                 break;
 

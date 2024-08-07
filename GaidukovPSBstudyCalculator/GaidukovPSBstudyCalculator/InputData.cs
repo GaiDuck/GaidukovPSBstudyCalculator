@@ -233,6 +233,14 @@ namespace GaidukovPSBstudyCalculator
             _numbers.Clear();
         }
 
+        public void SetExpressionAfterOpenBrackets()
+        {
+            _numbers.Clear();
+            _operators.Clear();
+            CompliteLists(_splitedInput);
+        }
+        
+
         //общие методы
 
         bool Validation(char mathOperator, double firstNumber, double secondNumber)
