@@ -11,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{BD60AB6B-CF3B-4295-A6CD-5A0A70D4220A}|GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator.csproj|solutionrelative:gaidukovpsbstudycalculator\\inputdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD60AB6B-CF3B-4295-A6CD-5A0A70D4220A}|GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator.csproj|c:\\users\\alexg\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\github\\gaidukovpsbstudycalculator\\gaidukovpsbstudycalculator\\gaidukovpsbstudycalculator\\calculating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD60AB6B-CF3B-4295-A6CD-5A0A70D4220A}|GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator.csproj|solutionrelative:gaidukovpsbstudycalculator\\calculating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BD60AB6B-CF3B-4295-A6CD-5A0A70D4220A}|GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator.csproj|c:\\users\\alexg\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\github\\gaidukovpsbstudycalculator\\gaidukovpsbstudycalculator\\gaidukovpsbstudycalculator\\additionalfunctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD60AB6B-CF3B-4295-A6CD-5A0A70D4220A}|GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator.csproj|solutionrelative:gaidukovpsbstudycalculator\\additionalfunctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD60AB6B-CF3B-4295-A6CD-5A0A70D4220A}|GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator.csproj|c:\\users\\alexg\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\github\\gaidukovpsbstudycalculator\\gaidukovpsbstudycalculator\\gaidukovpsbstudycalculator\\calculating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD60AB6B-CF3B-4295-A6CD-5A0A70D4220A}|GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator.csproj|solutionrelative:gaidukovpsbstudycalculator\\calculating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,23 +36,9 @@
               "RelativeDocumentMoniker": "GaidukovPSBstudyCalculator\\Program.cs",
               "ToolTip": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\Program.cs",
               "RelativeToolTip": "GaidukovPSBstudyCalculator\\Program.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAmwCAAAABFAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-23T13:57:35.676Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Calculating.cs",
-              "DocumentMoniker": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\Calculating.cs",
-              "RelativeDocumentMoniker": "GaidukovPSBstudyCalculator\\Calculating.cs",
-              "ToolTip": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\Calculating.cs",
-              "RelativeToolTip": "GaidukovPSBstudyCalculator\\Calculating.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T13:30:10.204Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -70,13 +56,39 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InputData.cs",
+              "DocumentMoniker": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\InputData.cs",
+              "RelativeDocumentMoniker": "GaidukovPSBstudyCalculator\\InputData.cs",
+              "ToolTip": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\InputData.cs",
+              "RelativeToolTip": "GaidukovPSBstudyCalculator\\InputData.cs",
+              "ViewState": "AQIAAI0AAAAAAAAAAAAAANEAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T11:09:16.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Calculating.cs",
+              "DocumentMoniker": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\Calculating.cs",
+              "RelativeDocumentMoniker": "GaidukovPSBstudyCalculator\\Calculating.cs",
+              "ToolTip": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\Calculating.cs",
+              "RelativeToolTip": "GaidukovPSBstudyCalculator\\Calculating.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T13:30:10.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AdditionalFunctions.cs",
               "DocumentMoniker": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\AdditionalFunctions.cs",
               "RelativeDocumentMoniker": "GaidukovPSBstudyCalculator\\AdditionalFunctions.cs",
               "ToolTip": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\AdditionalFunctions.cs",
               "RelativeToolTip": "GaidukovPSBstudyCalculator\\AdditionalFunctions.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAABAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAiwCsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-24T11:10:35.629Z",
               "EditorCaption": ""
@@ -90,40 +102,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "c5254eed-30d8-477f-b5db-d8401b4d9e84",
-        "Display": 0,
-        "X": -5,
-        "Y": 5,
-        "Width": 1279,
-        "Height": 751,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "InputData.cs",
-              "DocumentMoniker": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\InputData.cs",
-              "RelativeDocumentMoniker": "GaidukovPSBstudyCalculator\\InputData.cs",
-              "ToolTip": "C:\\Users\\alexg\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\GitHub\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\GaidukovPSBstudyCalculator\\InputData.cs",
-              "RelativeToolTip": "GaidukovPSBstudyCalculator\\InputData.cs",
-              "ViewState": "AQIAAMMAAAAAAAAAAAAiwNkAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T11:09:16.187Z",
-              "EditorCaption": ""
             }
           ]
         }

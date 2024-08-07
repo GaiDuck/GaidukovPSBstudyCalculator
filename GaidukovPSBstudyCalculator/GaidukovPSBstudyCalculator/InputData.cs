@@ -162,10 +162,10 @@ namespace GaidukovPSBstudyCalculator
         void CompliteBracketList(bool bracketIsOpen, bool bracketIsClosed)
         {
             BracketIsFound = false;
+            _bracket.Clear();
 
             if (bracketIsOpen && bracketIsClosed)
             {
-                _bracket.Clear();
                 for (int i = OpenBracketNumber + 1; i < CloseBracketNumber; i++)
                 {
                     _bracket.Add(_splitedInput[i]);
@@ -205,9 +205,9 @@ namespace GaidukovPSBstudyCalculator
 
         public void GetBrackets()
         {
-                CompliteBracketList(
-                    SeachForOpenBracket(),
-                    SeachForCloseBracket());
+            CompliteBracketList(
+                SeachForOpenBracket(),
+                SeachForCloseBracket());
 
             CompliteLists(_bracket);
         }
