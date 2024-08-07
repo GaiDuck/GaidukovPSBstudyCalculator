@@ -28,8 +28,8 @@ namespace GaidukovPSBstudyCalculator
         }
 
         public int MathOperatorCount { get; private set; }  
-        public int OpenBracketNumber { get; private set; }
-        public int CloseBracketNumber { get; private set; }
+        public int OpenBracketIndex { get; private set; }
+        public int CloseBracketIndex { get; private set; }
         public bool BracketIsFound { get; private set; }
         public double BracketResult { get; private set; }
 
@@ -134,7 +134,7 @@ namespace GaidukovPSBstudyCalculator
                 else
                 {
                     openBracketIsFound = true;
-                    OpenBracketNumber = openBracketNumber;
+                    OpenBracketIndex = openBracketNumber;
                     break;
                 }
             }
@@ -152,7 +152,7 @@ namespace GaidukovPSBstudyCalculator
                 else
                 {
                     closeBracketIsFound = true;
-                    CloseBracketNumber = closeBracketNumber;
+                    CloseBracketIndex = closeBracketNumber;
                     break;
                 }
             }
@@ -166,25 +166,27 @@ namespace GaidukovPSBstudyCalculator
 
             if (bracketIsOpen && bracketIsClosed)
             {
-                for (int i = OpenBracketNumber + 1; i < CloseBracketNumber; i++)
+                _bracket.Clear();
+                for (int i = OpenBracketIndex + 1; i < CloseBracketIndex; i++)
                 {
                     _bracket.Add(_splitedInput[i]);
                 }
 
                 BracketIsFound = true;
             }
+
         }
 
-        void CompliteLists(List<string> SplitedInput)
+        void CompliteLists(List<string> splitedInput)
         {
-            foreach (string simbol in SplitedInput)
+            for(int i = 0; i < splitedInput.Count; i++)
             {
-                bool parced = double.TryParse(simbol, out var result);
+                bool parced = double.TryParse(splitedInput[i], out var result);
 
                 if (parced)
                     _numbers.Add(result);
                 else
-                    _operators.Add(Convert.ToChar(simbol));
+                    _operators.Add(Convert.ToChar(splitedInput[i]));
             }
             MathOperatorCount = _operators.Count;
         }
@@ -205,22 +207,31 @@ namespace GaidukovPSBstudyCalculator
 
         public void GetBrackets()
         {
-            CompliteBracketList(
-                SeachForOpenBracket(),
-                SeachForCloseBracket());
+            OpenBracketIndex = 0;
+            CloseBracketIndex = 0;
+                CompliteBracketList(
+                    SeachForOpenBracket(),
+                    SeachForCloseBracket());
 
             CompliteLists(_bracket);
         }
 
-        public void SplitedInputRemoveBracket(double tempResult)
+        public void SplitedInputRemoveBracket(double tempResult, bool bracketIsFound)
         {
-            _splitedInput[OpenBracketNumber] = Convert.ToString(tempResult);
-            _splitedInput.RemoveRange(OpenBracketNumber + 1, CloseBracketNumber);
-            foreach (var bracket in _splitedInput) { Console.Write(bracket + " "); }
+            if (bracketIsFound)
+            {
+                _splitedInput[OpenBracketIndex] = Convert.ToString(tempResult);
+                _splitedInput.RemoveRange(OpenBracketIndex + 1, CloseBracketIndex - OpenBracketIndex);
+                foreach (var bracket in _splitedInput) { Console.Write(bracket + " "); }
+            }
         }
 
-        //калькулятор с вводом строкой с учетом скобок
-
+        public void SetBracketIndexes()
+        {
+            OpenBracketIndex = 0;
+            CloseBracketIndex = 0;
+            _numbers.Clear();
+        }
 
         //общие методы
 

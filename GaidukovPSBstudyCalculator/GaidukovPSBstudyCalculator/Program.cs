@@ -30,7 +30,10 @@ do
                 {
                     input.GetBrackets();
                     CalculatingByString();
-                    input.SplitedInputRemoveBracket(calc.TempResult);
+                    input.SplitedInputRemoveBracket(calc.TempResult, input.BracketIsFound);
+                    if (input.MathOperatorCount == 0)
+                        break;
+                    input.SetBracketIndexes();
                 } while (input.BracketIsFound); // не хватает перезаписи значения скобок
 
                 modeIsCorrect = true;
@@ -59,10 +62,11 @@ void CalculatingFromString(int i)
 
 void CalculatingByString()      //Приоритеты выполнения операций:
 {                               //Возведение в степень -> Умножение и деление -> Сложение и вычитание
-    int i = input.MathOperatorCount - 1;
-    Console.WriteLine($"Найдено {i + 1} математических операций.");
+    int i = input.MathOperatorCount;
 
-    for (int a = i; a > -1; a--) //цикл для вычисления степеней
+    Console.WriteLine($"Найдено {i} математических операций.");
+
+    for (int a = i - 1; a >= 0; a--) //цикл для вычисления степеней
     {
         input.SetNumbersByMathoperator(a);
         if (input.MathOperator == '^')
@@ -72,7 +76,7 @@ void CalculatingByString()      //Приоритеты выполнения оп
         }
     }
 
-    for (int b = i; b > -1; b--) //цикл для вычисления умножений и делений
+    for (int b = i - 1; b >= 0; b--) //цикл для вычисления умножений и делений
     {
         input.SetNumbersByMathoperator(b);
         if (input.MathOperator == '*' || input.MathOperator == '/')
@@ -82,23 +86,18 @@ void CalculatingByString()      //Приоритеты выполнения оп
         }
     }
 
-    for (int c = 0; c < i + 2; c++) //цикл для вычисления сложений и вычитаний
+    for (int c = 0; c < i;) //цикл для вычисления сложений и вычитаний
     {
-        try
-        {
-            input.SetNumbersByMathoperator(c);
+        input.SetNumbersByMathoperator(c);
 
-            if (input.MathOperator == '+' || input.MathOperator == '-')
-            {
-                CalculatingFromString(c);
-                c--;
-            }
-        }
-        catch
+        if (input.MathOperator == '+' || input.MathOperator == '-')
         {
-            break;
+            CalculatingFromString(c);
+            i--;
         }
-    }
+        else
+            c++;
+    } 
 }
 
 
