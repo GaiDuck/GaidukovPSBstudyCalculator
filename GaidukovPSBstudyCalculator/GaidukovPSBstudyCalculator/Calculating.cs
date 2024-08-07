@@ -8,76 +8,74 @@ namespace GaidukovPSBstudyCalculator
 {
     internal class Calculating
     {
-        AddictionalFunctions add = new AddictionalFunctions();
-
         public double TempResult { get; private set; }
 
-        double CalculateAddiction(double FirstNumber, double SecondNumber)
+        double CalculateAddiction(double firstNumber, double secondNumber)
         {
-            TempResult = FirstNumber + SecondNumber;
+            TempResult = firstNumber + secondNumber;
             return TempResult;
         }
 
-        double CalculateSubtraction(double FirstNumber, double SecondNumber)
+        double CalculateSubtraction(double firstNumber, double secondNumber)
         {
-            TempResult = FirstNumber - SecondNumber;
+            TempResult = firstNumber - secondNumber;
             return TempResult;
         }
 
-        double CalculateMultiplication(double FirstNumber, double SecondNumber)
+        double CalculateMultiplication(double firstNumber, double secondNumber)
         {
-            TempResult = FirstNumber * SecondNumber;
+            TempResult = firstNumber * secondNumber;
             return TempResult;
         }
 
-        double CalculateDivision(double FirstNumber, double SecondNumber)
+        double CalculateDivision(double firstNumber, double secondNumber)
         {
-            TempResult = FirstNumber / SecondNumber;
+            TempResult = firstNumber / secondNumber;
             return TempResult;
         }
 
-        double CalculatePower(double FirstNumber, double SecondNumber)
+        double CalculatePower(double firstNumber, double secondNumber)
         {
-            TempResult = Math.Pow(FirstNumber, SecondNumber);
+            TempResult = Math.Pow(firstNumber, secondNumber);
             return TempResult;
         }
 
-        void PublicLogs(double FirstNumber, double SecondNumber, char MathOperator, double TempResult)
+        void PublicLogs(double firstNumber, double secondNumber, char mathOperator, double tempResult)
         {
-            Console.WriteLine($"{FirstNumber} {MathOperator} {SecondNumber} = {TempResult}");
+            Console.WriteLine($"{firstNumber} {mathOperator} {secondNumber} = {tempResult}");
         }
 
-        public void Calculate(char MathOperator, double FirstNumber, double SecondNumber)
+        public void Calculate(char mathOperator, double firstNumber, double secondNumber)
         {
-            switch (MathOperator)
+            switch (mathOperator)
             {
                 case '+':
-                    PublicLogs(FirstNumber, SecondNumber, MathOperator, 
-                        CalculateAddiction(FirstNumber, SecondNumber));
+                    PublicLogs(firstNumber, secondNumber, mathOperator, 
+                        CalculateAddiction(firstNumber, secondNumber));
                     break;
 
                 case '-':
-                    PublicLogs(FirstNumber, SecondNumber, MathOperator, 
-                        CalculateSubtraction(FirstNumber, SecondNumber));
+                    PublicLogs(firstNumber, secondNumber, mathOperator, 
+                        CalculateSubtraction(firstNumber, secondNumber));
                     break;
 
                 case '*':
-                    PublicLogs(FirstNumber, SecondNumber, MathOperator, 
-                        CalculateMultiplication(FirstNumber, SecondNumber));
+                    PublicLogs(firstNumber, secondNumber, mathOperator, 
+                        CalculateMultiplication(firstNumber, secondNumber));
                     break;
 
                 case '/':
-                    PublicLogs(FirstNumber, SecondNumber, MathOperator, 
-                        CalculateDivision(FirstNumber, SecondNumber));
+                    PublicLogs(firstNumber, secondNumber, mathOperator, 
+                        CalculateDivision(firstNumber, secondNumber));
                     break;
 
                 case '^':
-                    PublicLogs(FirstNumber, SecondNumber, MathOperator, 
-                        CalculatePower(FirstNumber, SecondNumber));
+                    PublicLogs(firstNumber, secondNumber, mathOperator, 
+                        CalculatePower(firstNumber, secondNumber));
                     break;
 
                 default:
-                    add.EnterIncorrectData();
+                    AdditionalFunctions.EnterIncorrectData();
                     break;
             }
             //add.WaitForEnterButtonPush();

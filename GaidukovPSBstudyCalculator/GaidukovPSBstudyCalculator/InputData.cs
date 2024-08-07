@@ -8,8 +8,6 @@ namespace GaidukovPSBstudyCalculator
 {
     internal class InputData
     {
-        AddictionalFunctions add = new AddictionalFunctions();
-
         public double FirstNumber { get; private set; }
         public double SecondNumber { get; private set; }
         public char MathOperator { get; private set; }
@@ -19,19 +17,25 @@ namespace GaidukovPSBstudyCalculator
         List<string> _splitedInput;
         List<double> _numbers;
         List<char> _operators;
+        List<string> _bracket;
 
         public InputData()
         {
             _splitedInput = new List<string>();
             _numbers = new List<double>();
             _operators = new List<char>();
+            _bracket = new List<string>();
         }
 
         public int MathOperatorCount { get; private set; }  
+        public int OpenBracketNumber { get; private set; }
+        public int CloseBracketNumber { get; private set; }
+        public bool BracketIsFound { get; private set; }
+        public double BracketResult { get; private set; }
 
         //калькулятор с вводом по действиям
 
-        double GetNumber()
+        double GetNumber() //метод, парясящий вводимое пользователем число из строки в числовое значение
         {
             bool parsed;
 
@@ -42,20 +46,20 @@ namespace GaidukovPSBstudyCalculator
                 if (parsed)
                     return input;
                 else
-                    add.EnterIncorrectData();
+                    AdditionalFunctions.EnterIncorrectData();
             }
             while (!parsed); //будет запрашивать ввод числа пока пользователь не введет корректное значение
 
             return 0;
         }
 
-        void GetFirstNumber()
+        void GetFirstNumber() //метод, записывающий первое число в свойство
         {
             Console.Write("Введите первое число: ");
             FirstNumber = GetNumber();
         }
 
-        void GetSecondNumber()
+        void GetSecondNumber() //метод, записывающий второе число в свойство
         {
             Console.Write("Введите второе число: ");
             do
@@ -65,7 +69,7 @@ namespace GaidukovPSBstudyCalculator
             while (!Validation(MathOperator, FirstNumber, SecondNumber));
         }
 
-        void GetMathOperator()
+        void GetMathOperator() //метод, записывающий математический оператор в свойство
         {
             Console.Write("Введите символ операции: ");
 
@@ -77,22 +81,20 @@ namespace GaidukovPSBstudyCalculator
 
                 if (parsed)
                 {
-                    foreach (char m in mathOperators)
-                        if (m == input)
-                        {
-                            MathOperator = input;
-                            mathOperatorFound = true;
-                            break;
-                        }
+                    if(mathOperators.Contains(input))
+                    {
+                        MathOperator = input;
+                        mathOperatorFound = true;
+                    }
                 }
 
-                if (!mathOperatorFound || !parsed)
-                    add.EnterIncorrectData();
+                if (!(mathOperatorFound && parsed))
+                    AdditionalFunctions.EnterIncorrectData();
             }
             while (!mathOperatorFound);
         }
 
-        public void GetDataV1()
+        public void GetDataV1() //комплекс методов, получающих два числа и математический оператор
         {
             GetFirstNumber();
             GetMathOperator();
@@ -101,21 +103,75 @@ namespace GaidukovPSBstudyCalculator
 
         //калькулятор с вводом строкой
 
-        public void StringInput()
+        public void StringInput() //принимает на вход строку и записывает ее по частям в массив строк
         {
             Console.Write("Введите математическое выражение одной строкой, разделяя все числа и математические операции " +
-                          "пробелами. Используйте запятую для записи чисел с дробной частью.\n\n");
-            
-            string[] input = Console.ReadLine().Split(' ');
+                          "пробелами. Используйте запятую для записи чисел с дробной частью.  \n\n");
 
-            if (input == null)
-                _splitedInput.Add("0");
-            else
+            try
             {
-                foreach (string s in input) 
-                { 
+                string[] input = Console.ReadLine().Split(' ');
+
+                foreach (string s in input)
+                {
                     _splitedInput.Add(s);
-                } 
+                }
+            }
+            catch
+            {
+                _splitedInput.Add("0");
+            }
+        }
+
+        bool SeachForOpenBracket()
+        {
+            int openBracketNumber = 0;
+            bool openBracketIsFound = false;
+            foreach (string s in _splitedInput)
+            {
+                if (s != "(")
+                    openBracketNumber++;
+                else
+                {
+                    openBracketIsFound = true;
+                    OpenBracketNumber = openBracketNumber;
+                    break;
+                }
+            }
+            return openBracketIsFound;
+        }
+
+        bool SeachForCloseBracket()
+        {
+            int closeBracketNumber = 0;
+            bool closeBracketIsFound = false;
+            foreach (string s in _splitedInput)
+            {
+                if (s != ")")
+                    closeBracketNumber++;
+                else
+                {
+                    closeBracketIsFound = true;
+                    CloseBracketNumber = closeBracketNumber;
+                    break;
+                }
+            }
+            return closeBracketIsFound;
+        }
+
+        void CompliteBracketList(bool bracketIsOpen, bool bracketIsClosed)
+        {
+            BracketIsFound = false;
+
+            if (bracketIsOpen && bracketIsClosed)
+            {
+                _bracket.Clear();
+                for (int i = OpenBracketNumber + 1; i < CloseBracketNumber; i++)
+                {
+                    _bracket.Add(_splitedInput[i]);
+                }
+
+                BracketIsFound = true;
             }
         }
 
@@ -147,11 +203,24 @@ namespace GaidukovPSBstudyCalculator
             _operators.RemoveAt(mathOperatorNumber);
         }
 
-        public void GetDataV2()
+        public void GetBrackets()
         {
-            StringInput();
-            CompliteLists(_splitedInput);
+                CompliteBracketList(
+                    SeachForOpenBracket(),
+                    SeachForCloseBracket());
+
+            CompliteLists(_bracket);
         }
+
+        public void SplitedInputRemoveBracket(double tempResult)
+        {
+            _splitedInput[OpenBracketNumber] = Convert.ToString(tempResult);
+            _splitedInput.RemoveRange(OpenBracketNumber + 1, CloseBracketNumber);
+            foreach (var bracket in _splitedInput) { Console.Write(bracket + " "); }
+        }
+
+        //калькулятор с вводом строкой с учетом скобок
+
 
         //общие методы
 
@@ -159,12 +228,12 @@ namespace GaidukovPSBstudyCalculator
         {
             if (mathOperator == '/' && secondNumber == 0)
             {
-                add.EnterIncorrectData();
+                AdditionalFunctions.EnterIncorrectData();
                 return false;
             }
             else if (mathOperator == '^' && firstNumber < 0 && secondNumber > -1 && secondNumber < 1)
             {
-                add.EnterIncorrectData();
+                AdditionalFunctions.EnterIncorrectData();
                 return false;
             }
             else

@@ -1,50 +1,70 @@
 ﻿using GaidukovPSBstudyCalculator;
 
-AddictionalFunctions add = new AddictionalFunctions();
 Calculating calc = new Calculating();
 InputData input = new InputData();
 
-add.Greeting();
-Console.WriteLine("1 - пошаговый, 2 - строкой");
+AdditionalFunctions.Greeting();
 
-switch (Convert.ToByte(Console.ReadLine()))
+bool modeIsCorrect;
+
+do
 {
-    case 1:
-        CalculatingStepByStep();
-    break;
+    Console.WriteLine("1 - пошаговый, 2 - строкой");
 
-    case 2:  //калькулятор, считающий из строки
-        CalculatingByString();
-    break;
+    modeIsCorrect = false;
 
-    default:
-        Console.WriteLine("Эта функция находится в разработке.");
-    break;
+    bool parsed = byte.TryParse(Console.ReadLine(), out var mode);
+
+    if (parsed)
+    {
+        switch (mode)
+        {
+            case 1:
+                CalculatingStepByStep();
+                modeIsCorrect = true;
+                break;
+
+            case 2:  //калькулятор, считающий из строки
+                input.StringInput();
+                do
+                {
+                    input.GetBrackets();
+                    CalculatingByString();
+                    input.SplitedInputRemoveBracket(calc.TempResult);
+                } while (input.BracketIsFound); // не хватает перезаписи значения скобок
+
+                modeIsCorrect = true;
+                break;
+
+            default:
+                Console.WriteLine("Эта функция находится в разработке, попробуйте воспользоваться другой функцией.");
+                break;
+        }  
+    }
 }
+while (!modeIsCorrect);
 
 void CalculatingStepByStep()  //калькулятор с пошаговым рассчестом
 {
+    input.StringInput();
     input.GetDataV1();
     calc.Calculate(input.MathOperator, input.FirstNumber, input.SecondNumber);
 }
 
 void CalculatingFromString(int i)
-{
-    input.SetNumbersByMathoperator(i); 
+{ 
     calc.Calculate(input.MathOperator, input.FirstNumber, input.SecondNumber);
     input.UpdateExpression(calc.TempResult, i); 
 }
 
 void CalculatingByString()      //Приоритеты выполнения операций:
 {                               //Возведение в степень -> Умножение и деление -> Сложение и вычитание
-    input.GetDataV2();
-    Console.WriteLine("\nДанные получены!\n");
-
     int i = input.MathOperatorCount - 1;
     Console.WriteLine($"Найдено {i + 1} математических операций.");
 
     for (int a = i; a > -1; a--) //цикл для вычисления степеней
     {
+        input.SetNumbersByMathoperator(a);
         if (input.MathOperator == '^')
         {
             CalculatingFromString(a);
@@ -54,6 +74,7 @@ void CalculatingByString()      //Приоритеты выполнения оп
 
     for (int b = i; b > -1; b--) //цикл для вычисления умножений и делений
     {
+        input.SetNumbersByMathoperator(b);
         if (input.MathOperator == '*' || input.MathOperator == '/')
         {
             CalculatingFromString(b);
@@ -61,12 +82,21 @@ void CalculatingByString()      //Приоритеты выполнения оп
         }
     }
 
-    for (int c = i; c > -1; c--) //цикл для вычисления сложений и вычитаний
+    for (int c = 0; c < i + 2; c++) //цикл для вычисления сложений и вычитаний
     {
-        if (input.MathOperator == '+' || input.MathOperator == '-')
+        try
         {
-            CalculatingFromString(c);
-            i--;
+            input.SetNumbersByMathoperator(c);
+
+            if (input.MathOperator == '+' || input.MathOperator == '-')
+            {
+                CalculatingFromString(c);
+                c--;
+            }
+        }
+        catch
+        {
+            break;
         }
     }
 }

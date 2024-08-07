@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace GaidukovPSBstudyCalculator
 {
-    internal class AddictionalFunctions //Методы, не отвечающие за функционал программы
+    internal static class AdditionalFunctions //Методы, не отвечающие за функционал программы
     {
-        public void WaitForAnyButtonPush()
+        public static void WaitForAnyButtonPush()
         {
             Console.WriteLine("\nДля продолжения нажмите любую клавишу... \n ");
             Console.ReadKey();
         }
-        public void WaitForEnterButtonPush()
+        public static void WaitForEnterButtonPush()
         {
             Console.WriteLine(" ");
             Console.WriteLine("Нажмите Enter...");
@@ -22,14 +22,14 @@ namespace GaidukovPSBstudyCalculator
 
         }
 
-        public void EnterIncorrectData()
+        public static void EnterIncorrectData()
         {
             ConsoleColor defaltColor = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Write("Вы ввели не корректные данные. \nПопробуйте ввести данные повторно:");
             Console.ForegroundColor = defaltColor;
         }
-        public void Greeting()
+        public static void Greeting()
         {
             Console.WriteLine("Добро пожаловать в Калькулятор\n");
             Console.WriteLine("Мой калькулятор может выполнять следующие операции: " +
