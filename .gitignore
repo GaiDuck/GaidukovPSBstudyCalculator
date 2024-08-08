@@ -1,0 +1,7 @@
+﻿################################################################################
+# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
+################################################################################
+
+/GaidukovPSBstudyCalculator/.vs/GaidukovPSBstudyCalculator/FileContentIndex/1f12fa1c-6367-4939-9c62-205f2a04ee17.vsidx
+/GaidukovPSBstudyCalculator/.vs/GaidukovPSBstudyCalculator/FileContentIndex/44f4a860-9bbf-46a9-bb63-b9af6e5fbf47.vsidx
+*.vsidx

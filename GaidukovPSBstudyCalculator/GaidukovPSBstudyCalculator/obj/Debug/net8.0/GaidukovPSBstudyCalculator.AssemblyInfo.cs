@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GaidukovPSBstudyCalculator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b7ee2d42a8a5764e731bcca92adeb8795d6a722")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cac58885832f1bed2a8db5aeb342cc1c605f4fdd")]
 [assembly: System.Reflection.AssemblyProductAttribute("GaidukovPSBstudyCalculator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GaidukovPSBstudyCalculator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
