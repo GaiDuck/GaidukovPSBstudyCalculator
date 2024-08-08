@@ -62,11 +62,7 @@ namespace GaidukovPSBstudyCalculator
         void GetSecondNumber() //метод, записывающий второе число в свойство
         {
             Console.Write("Введите второе число: ");
-            do
-            {
-                SecondNumber = GetNumber();
-            }
-            while (!OperationIsValid(MathOperator, FirstNumber, SecondNumber));
+            SecondNumber = GetNumber();
         }
 
         void GetMathOperator() //метод, записывающий математический оператор в свойство
@@ -233,11 +229,6 @@ namespace GaidukovPSBstudyCalculator
             _numbers.Clear();
             _operators.Clear();
             CompliteLists(_splitedInput);
-        }
-
-        bool InputIsValid()
-        {
-            return true;
         }
     }
 }
